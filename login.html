@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="username">username</label>
+      <input type="text" id="username" name="username" required />
+    </div>
+    <div>
+      <label for="">password</label>
+      <input type="password" id="password" name="password" required />
+    </div>
+    <button onclick="login()">login</button>
+
+    <!-- login jav script -->
+    <script>
+      function login() {
+        const Username = document.getElementById("username").value;
+        const Password = document.getElementById("password").value;
+
+        const validusername = "rein";
+        const validpassword = "rein123";
+
+        if (Username === validusername && Password === validpassword) {
+          alert("login succesfull");
+          window.location.href = portofolio.html;
+        } else {
+          alert("login failed,username or password were inccorect");
+          errorMessage.textcontent = "username or password was incorrect";
+          errorMessage.style.display = "block";
+
+          setTimeout(() => {
+            errorMessage.style.display = "none";
+          }, 4000);
+        }
+      }
+    </script>
+  </body>
+</html>
